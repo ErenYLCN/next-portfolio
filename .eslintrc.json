@@ -1,4 +1,10 @@
 {
   "extends": ["next/core-web-vitals", "next", "prettier"],
-  "plugins": ["eslint-plugin-react-compiler"]
+  "plugins": ["eslint-plugin-react-compiler"],
+  "rules": {
+    "react/jsx-curly-brace-presence": [
+      "error",
+      { "props": "always", "children": "always" }
+    ]
+  }
 }
