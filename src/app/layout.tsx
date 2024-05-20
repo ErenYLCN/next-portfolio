@@ -4,6 +4,7 @@ import "../core/ui/globals.scss";
 import "../core/ui/tailwind.css";
 import classNames from "classnames";
 import BackgroundGradient from "@/component/background-gradient/BackgroundGradient";
+import Header from "@/component/header/Header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,6 +26,8 @@ export default function RootLayout({
           "relative bg-slate-50 text-gray-950",
         )}
       >
+        <Header />
+
         <BackgroundGradient />
 
         {children}
