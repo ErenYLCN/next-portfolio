@@ -1,13 +1,12 @@
-"use client";
-
-import { useState } from "react";
+import Intro from "@/component/intro/Intro";
+import SectionDivider from "@/component/section-divider/SectionDivider";
 
 export default function Home() {
-  const [count, setCount] = useState(0);
-
   return (
-    <main>
-      <button onClick={() => setCount(count + 1)}>Increment: {count}</button>
+    <main className={"pt-28 flex flex-col items-center px-4"}>
+      <Intro />
+
+      <SectionDivider />
     </main>
   );
 }

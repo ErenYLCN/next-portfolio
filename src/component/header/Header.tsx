@@ -19,7 +19,7 @@ function Header() {
       />
 
       <nav
-        className={`fixed top-[0.15rem] left-1/2 -translate-x-1/2 h-12 py-2 
+        className={`flex fixed top-[0.15rem] left-1/2 -translate-x-1/2 h-12 py-2 
           sm:top-[1.7rem] sm:h-[initial] sm:py-0`}
       >
         <ul
@@ -28,13 +28,20 @@ function Header() {
             sm:flex-nowrap sm:gap-5`}
         >
           {links.map((link) => (
-            <li
+            <motion.li
               key={link.hash}
-              className={`h-3/4 w-full flex items-center justify-center
-              px-3 py-3 hover:text-gray-950 transition`}
+              className={`h-3/4 flex items-center justify-center`}
+              initial={{ y: -100, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
             >
-              <Link href={link.hash}>{link.name}</Link>
-            </li>
+              <Link
+                className={`flex w-full items-center justify-center
+                  px-3 py-3 hover:text-gray-900 transition`}
+                href={link.hash}
+              >
+                {link.name}
+              </Link>
+            </motion.li>
           ))}
         </ul>
       </nav>
