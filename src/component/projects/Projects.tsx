@@ -12,7 +12,7 @@ function Projects() {
   const { ref } = useActiveSectionHandler({ name: "Projects" });
 
   return (
-    <section ref={ref} id={"projects"} className={"mb-28 scroll-mt-28"}>
+    <section ref={ref} id={"projects"} className={"mb-28 scroll-mt-28 text-center"}>
       <SectionHeading title={"my projects"} />
 
       <ul>

@@ -2,8 +2,6 @@
 
 import React, { Fragment } from "react";
 
-import SectionHeading from "../section-heading/SectionHeading";
-
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -13,11 +11,17 @@ import { useActiveSectionHandler } from "@/core/hook/active-section-handler/useA
 import "react-vertical-timeline-component/style.min.css";
 import { experiencesData } from "@/core/lib/data";
 
+import SectionHeading from "../section-heading/SectionHeading";
+
 function Experience() {
   const { ref } = useActiveSectionHandler({ name: "Experience" });
 
   return (
-    <section ref={ref} id={"experience"} className={"mb-28 scroll-mt-28"}>
+    <section
+      ref={ref}
+      id={"experience"}
+      className={"mb-28 scroll-mt-28 sm:mb-40 text-center"}
+    >
       <SectionHeading title={"my experience"} />
 
       <VerticalTimeline lineColor={""}>

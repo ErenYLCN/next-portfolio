@@ -9,10 +9,12 @@ import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { FaGithubSquare } from "react-icons/fa";
 import { HiDownload } from "react-icons/hi";
 
+import { useActiveSectionContext } from "@/core/context/active-section/ActiveSectionContext";
 import { useActiveSectionHandler } from "@/core/hook/active-section-handler/useActiveSectionHandler";
 
 function Intro() {
   const { ref } = useActiveSectionHandler({ name: "Home" });
+  const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
   return (
     <section
@@ -84,6 +86,7 @@ function Intro() {
       >
         <Link
           href={"#contact"}
+          onClick={handleContactClick}
           className={`group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full
           outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105
           transition`}
@@ -125,6 +128,11 @@ function Intro() {
       </motion.div>
     </section>
   );
+
+  function handleContactClick() {
+    setTimeOfLastClick(Date.now());
+    setActiveSection("Contact");
+  }
 }
 
 export default Intro;
