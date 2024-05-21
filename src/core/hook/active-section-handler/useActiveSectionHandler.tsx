@@ -1,7 +1,9 @@
+import { useEffect } from "react";
+
+import { useInView } from "react-intersection-observer";
+
 import { useActiveSectionContext } from "@/core/context/active-section/ActiveSectionContext";
 import { SectionTitle } from "@/core/lib/types";
-import { useEffect } from "react";
-import { useInView } from "react-intersection-observer";
 
 export type UseActiveSectionHandlerProps = {
   name: SectionTitle;

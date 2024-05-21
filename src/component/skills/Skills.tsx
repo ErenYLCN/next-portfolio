@@ -1,10 +1,13 @@
 "use client";
 
-import { skillsData } from "@/core/lib/data";
 import React from "react";
-import SectionHeading from "../section-heading/SectionHeading";
-import { useActiveSectionHandler } from "@/core/hook/active-section-handler/useActiveSectionHandler";
+
 import { motion } from "framer-motion";
+
+import { useActiveSectionHandler } from "@/core/hook/active-section-handler/useActiveSectionHandler";
+import { skillsData } from "@/core/lib/data";
+
+import SectionHeading from "../section-heading/SectionHeading";
 
 const FADE_IN_VARIANTS = {
   initial: { opacity: 0, y: 20 },
@@ -28,9 +31,7 @@ function Skills() {
     >
       <SectionHeading title={"my skills"} />
 
-      <ul
-        className={"flex flex-wrap justify-center text-lg text-gray-800 gap-3"}
-      >
+      <ul className={"flex flex-wrap justify-center text-lg text-gray-800 gap-3"}>
         {skillsData.map((skill, index) => (
           <motion.li
             key={index}

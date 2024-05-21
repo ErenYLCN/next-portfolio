@@ -1,9 +1,12 @@
 "use client";
 
 import React from "react";
-import SectionHeading from "../section-heading/SectionHeading";
+
 import { motion } from "framer-motion";
+
 import { useActiveSectionHandler } from "@/core/hook/active-section-handler/useActiveSectionHandler";
+
+import SectionHeading from "../section-heading/SectionHeading";
 
 function About() {
   const { ref } = useActiveSectionHandler({ name: "About", threshold: 0.75 });
@@ -27,9 +30,7 @@ function About() {
         {", and since then, I've worked on multiple "}
         <span className={"font-medium"}>{"large-scale applications"}</span>
         {" across various domains, with a particular focus on "}
-        <span className={"font-medium underline italic"}>
-          {"blockchain technology"}
-        </span>
+        <span className={"font-medium underline italic"}>{"blockchain technology"}</span>
         {
           ". My professional journey has not only honed my technical skills but also allowed me to "
         }
@@ -43,9 +44,7 @@ function About() {
         <span className={"font-medium underline italic"}>
           {"full stack development with ExpressJS"}
         </span>
-        {
-          ", aiming to broaden my expertise and take on more comprehensive projects."
-        }
+        {", aiming to broaden my expertise and take on more comprehensive projects."}
       </p>
     </motion.section>
   );

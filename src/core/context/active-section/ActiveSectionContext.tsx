@@ -1,6 +1,7 @@
 "use client";
 
 import React, { createContext, use, useState } from "react";
+
 import { SectionTitle } from "@/core/lib/types";
 
 export const ActiveSectionContext = createContext(
@@ -9,7 +10,7 @@ export const ActiveSectionContext = createContext(
     setActiveSection: React.Dispatch<React.SetStateAction<SectionTitle>>;
     timeOfLastClick: number;
     setTimeOfLastClick: React.Dispatch<React.SetStateAction<number>>;
-  },
+  }
 );
 
 export const ActiveSectionContextProvider = ({

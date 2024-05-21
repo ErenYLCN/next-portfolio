@@ -1,10 +1,12 @@
 "use client";
 
 import React from "react";
-import SectionHeading from "../section-heading/SectionHeading";
-import { projectsData } from "@/core/lib/data";
-import ProjectsListItem from "./list-item/ProjectsListItem";
+
 import { useActiveSectionHandler } from "@/core/hook/active-section-handler/useActiveSectionHandler";
+import { projectsData } from "@/core/lib/data";
+
+import ProjectsListItem from "./list-item/ProjectsListItem";
+import SectionHeading from "../section-heading/SectionHeading";
 
 function Projects() {
   const { ref } = useActiveSectionHandler({ name: "Projects" });

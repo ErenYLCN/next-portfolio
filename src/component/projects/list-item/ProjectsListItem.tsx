@@ -1,18 +1,15 @@
 "use client";
 
+import React, { useRef } from "react";
+
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
-import React, { useRef } from "react";
+
 import { projectsData } from "@/core/lib/data";
 
 type ProjectsListItemProps = (typeof projectsData)[number];
 
-function ProjectsListItem({
-  title,
-  description,
-  tags,
-  imageUrl,
-}: ProjectsListItemProps) {
+function ProjectsListItem({ title, description, tags, imageUrl }: ProjectsListItemProps) {
   const ref = useRef<HTMLLIElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,

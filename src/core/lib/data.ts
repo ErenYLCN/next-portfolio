@@ -1,11 +1,12 @@
 import React from "react";
+
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 
+import governanceImg from "../../../public/governance.png";
 import peraImg from "../../../public/pera.png";
 import unwrapitImg from "../../../public/unwrapit.png";
-import governanceImg from "../../../public/governance.png";
 
 export const links = [
   {

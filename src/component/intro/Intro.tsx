@@ -1,13 +1,15 @@
 "use client";
 
-import { useActiveSectionHandler } from "@/core/hook/active-section-handler/useActiveSectionHandler";
+import React from "react";
+
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { FaGithubSquare } from "react-icons/fa";
 import { HiDownload } from "react-icons/hi";
+
+import { useActiveSectionHandler } from "@/core/hook/active-section-handler/useActiveSectionHandler";
 
 function Intro() {
   const { ref } = useActiveSectionHandler({ name: "Home" });
@@ -87,9 +89,7 @@ function Intro() {
           transition`}
         >
           {"Contact me"}
-          <BsArrowRight
-            className={"opacity-70 group-hover:translate-x-1 transition"}
-          />
+          <BsArrowRight className={"opacity-70 group-hover:translate-x-1 transition"} />
         </Link>
 
         <a
@@ -100,9 +100,7 @@ function Intro() {
           border-black/10`}
         >
           {"Download CV"}
-          <HiDownload
-            className={"opacity-60 group-hover:translate-y-0.5 transition"}
-          />
+          <HiDownload className={"opacity-60 group-hover:translate-y-0.5 transition"} />
         </a>
 
         <a

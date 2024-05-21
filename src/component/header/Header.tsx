@@ -1,11 +1,13 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
-import { links } from "@/core/lib/data";
-import Link from "next/link";
+
 import classNames from "classnames";
+import { motion } from "framer-motion";
+import Link from "next/link";
+
 import { useActiveSectionContext } from "@/core/context/active-section/ActiveSectionContext";
+import { links } from "@/core/lib/data";
 import { SectionTitle } from "@/core/lib/types";
 
 function Header() {
@@ -44,7 +46,7 @@ function Header() {
                 className={classNames(
                   `flex w-full items-center justify-center
                   px-3 py-3 hover:text-gray-900 transition`,
-                  { "text-gray-900": activeSection === link.name },
+                  { "text-gray-900": activeSection === link.name }
                 )}
                 href={link.hash}
                 onClick={handleLinkClick(link.name)}
@@ -54,7 +56,7 @@ function Header() {
                 {activeSection === link.name && (
                   <motion.span
                     className={classNames(
-                      "absolute inset-0 bg-gray-100 rounded-full -z-10",
+                      "absolute inset-0 bg-gray-100 rounded-full -z-10"
                     )}
                     layoutId={"activeSection"}
                     transition={{ type: "spring", stiffness: 380, damping: 30 }}

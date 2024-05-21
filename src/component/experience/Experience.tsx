@@ -1,12 +1,15 @@
 "use client";
 
-import { useActiveSectionHandler } from "@/core/hook/active-section-handler/useActiveSectionHandler";
 import React, { Fragment } from "react";
+
 import SectionHeading from "../section-heading/SectionHeading";
+
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
+
+import { useActiveSectionHandler } from "@/core/hook/active-section-handler/useActiveSectionHandler";
 import "react-vertical-timeline-component/style.min.css";
 import { experiencesData } from "@/core/lib/data";
 
