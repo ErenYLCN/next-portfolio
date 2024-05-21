@@ -97,7 +97,9 @@ export const skillsData = [
   "Node.js",
   "Git",
   "Tailwind",
-  "Redux",
-  "Express",
   "Framer Motion",
+  "Redux",
+  "Context API",
+  "Zustand",
+  "Express",
 ] as const;
