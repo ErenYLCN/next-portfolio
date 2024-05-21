@@ -4,7 +4,7 @@ import "../core/ui/globals.scss";
 import "../core/ui/tailwind.css";
 import classNames from "classnames";
 import BackgroundGradient from "@/component/background-gradient/BackgroundGradient";
-import Header from "@/component/header/Header";
+import { ActiveSectionContextProvider } from "@/core/context/active-section/ActiveSectionContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,18 +19,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang={"en"}>
+    <html lang={"en"} className={"!scroll-smooth"}>
       <body
         className={classNames(
           inter.className,
           "relative bg-slate-50 text-gray-950",
         )}
       >
-        <Header />
-
         <BackgroundGradient />
 
-        {children}
+        <ActiveSectionContextProvider>{children}</ActiveSectionContextProvider>
       </body>
     </html>
   );

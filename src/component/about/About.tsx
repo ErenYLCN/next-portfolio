@@ -3,11 +3,16 @@
 import React from "react";
 import SectionHeading from "../section-heading/SectionHeading";
 import { motion } from "framer-motion";
+import { useActiveSectionHandler } from "@/core/hook/active-section-handler/useActiveSectionHandler";
 
 function About() {
+  const { ref } = useActiveSectionHandler({ name: "About", threshold: 0.75 });
+
   return (
     <motion.section
-      className={"mb-28 max-w-[45rem] text-center leading-8"}
+      ref={ref}
+      id={"about"}
+      className={"mb-28 max-w-[45rem] text-center leading-8 scroll-mt-28"}
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}

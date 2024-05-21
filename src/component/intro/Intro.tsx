@@ -1,5 +1,6 @@
 "use client";
 
+import { useActiveSectionHandler } from "@/core/hook/active-section-handler/useActiveSectionHandler";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -9,8 +10,14 @@ import { FaGithubSquare } from "react-icons/fa";
 import { HiDownload } from "react-icons/hi";
 
 function Intro() {
+  const { ref } = useActiveSectionHandler({ name: "Home" });
+
   return (
-    <section className={"mb-28 max-w-[50rem] text-center sm:mb-0"}>
+    <section
+      ref={ref}
+      id={"home"}
+      className={"mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"}
+    >
       <div className={`flex items-center justify-center`}>
         <div className={"relative"}>
           <motion.div

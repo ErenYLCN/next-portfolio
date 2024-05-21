@@ -4,8 +4,14 @@ import React from "react";
 import { motion } from "framer-motion";
 import { links } from "@/core/lib/data";
 import Link from "next/link";
+import classNames from "classnames";
+import { useActiveSectionContext } from "@/core/context/active-section/ActiveSectionContext";
+import { SectionTitle } from "@/core/lib/types";
 
 function Header() {
+  const { activeSection, setActiveSection, setTimeOfLastClick } =
+    useActiveSectionContext();
+
   return (
     <header className={"z-[999] relative"}>
       <motion.div
@@ -30,16 +36,30 @@ function Header() {
           {links.map((link) => (
             <motion.li
               key={link.hash}
-              className={`h-3/4 flex items-center justify-center`}
+              className={`relative h-3/4 flex items-center justify-center`}
               initial={{ y: -100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
             >
               <Link
-                className={`flex w-full items-center justify-center
-                  px-3 py-3 hover:text-gray-900 transition`}
+                className={classNames(
+                  `flex w-full items-center justify-center
+                  px-3 py-3 hover:text-gray-900 transition`,
+                  { "text-gray-900": activeSection === link.name },
+                )}
                 href={link.hash}
+                onClick={handleLinkClick(link.name)}
               >
                 {link.name}
+
+                {activeSection === link.name && (
+                  <motion.span
+                    className={classNames(
+                      "absolute inset-0 bg-gray-100 rounded-full -z-10",
+                    )}
+                    layoutId={"activeSection"}
+                    transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                  />
+                )}
               </Link>
             </motion.li>
           ))}
@@ -47,6 +67,13 @@ function Header() {
       </nav>
     </header>
   );
+
+  function handleLinkClick(name: SectionTitle) {
+    return () => {
+      setTimeOfLastClick(Date.now());
+      setActiveSection(name);
+    };
+  }
 }
 
 export default Header;
