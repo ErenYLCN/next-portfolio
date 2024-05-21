@@ -3,6 +3,10 @@ import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 
+import peraImg from "../../../public/pera.png";
+import unwrapitImg from "../../../public/unwrapit.png";
+import governanceImg from "../../../public/governance.png";
+
 export const links = [
   {
     name: "Home",
@@ -59,25 +63,25 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "CorpComment",
+    title: "Pera Wallet",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: "corpcommentImg.png",
+      "The leading wallet app of Algorand ecosystem. I was responsible for building Discover section, a web app that is injected into the native Android and iOS apps.",
+    tags: ["React", "Typescript", "SASS", "Context API", "WebView"],
+    imageUrl: peraImg,
   },
   {
-    title: "rmtDev",
+    title: "Governance Platform",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: "rmtdevImg.png",
+      "A web app for voting on proposals in the Algorand ecosystem. I was responsible for implementing latest features and maintaining the app.",
+    tags: ["React", "Typescript", "SASS", "Context API", "Algo SDK"],
+    imageUrl: governanceImg,
   },
   {
-    title: "Word Analytics",
+    title: "Unwrapit",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: "wordanalyticsImg.png",
+      "Digital gifting platform for people and companies. I developed some of the latest features and maintained the app.",
+    tags: ["React", "Typescript", "SASS", "Context API", "Framer Motion"],
+    imageUrl: unwrapitImg,
   },
 ] as const;
 
