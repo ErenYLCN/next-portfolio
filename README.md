@@ -62,11 +62,4 @@ To set up the project locally, follow these steps:
 - **Download CV**: Click on the CV link to download my latest CV.
 - **Social Links**: Click on the LinkedIn and GitHub icons to visit my profiles.
 
-```
-
 Feel free to customize it further based on your specific needs and preferences!
-```
-
-```
-
-```
