@@ -2,6 +2,7 @@
 const nextConfig = {
   experimental: {
     reactCompiler: true,
+    serverActions: true,
   },
   sassOptions: {},
 };

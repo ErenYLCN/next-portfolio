@@ -100,7 +100,7 @@ function Intro() {
           download
           className={`group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none 
           focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer border 
-          border-black/10`}
+          border-black/10 dark:bg-white/10`}
         >
           {"Download CV"}
           <HiDownload className={"opacity-60 group-hover:translate-y-0.5 transition"} />
@@ -111,7 +111,7 @@ function Intro() {
           target={"_blank"}
           className={`bg-white px-3 py-3 flex items-center gap-2 rounded-full outline-none 
           focus:scale-110 hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition 
-          cursor-pointer border border-black/10`}
+          cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60`}
         >
           <BsLinkedin />
         </a>
@@ -120,8 +120,8 @@ function Intro() {
           href={"https://github.com/ErenYLCN"}
           target={"_blank"}
           className={`bg-white px-3 py-3 flex items-center gap-2 rounded-full outline-none 
-          focus:scale-110 hover:scale-[1.15] active:scale-105 transition cursor-pointer border 
-          border-black/10`}
+          focus:scale-110  hover:scale-[1.15] active:scale-105 transition cursor-pointer border 
+          border-black/10 dark:bg-white/10 dark:text-white/60`}
         >
           <FaGithubSquare />
         </a>

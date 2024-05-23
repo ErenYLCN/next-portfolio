@@ -1,9 +1,11 @@
 import React from "react";
 
 import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
+import { FaReact, FaWallet } from "react-icons/fa";
+import { FaComputer } from "react-icons/fa6";
 import { LuGraduationCap } from "react-icons/lu";
 
+import gesumeImg from "../../../public/gesume.png";
 import governanceImg from "../../../public/governance.png";
 import peraImg from "../../../public/pera.png";
 import unwrapitImg from "../../../public/unwrapit.png";
@@ -37,28 +39,44 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "Graduated from Bilkent University",
+    location: "Ankara, Turkey",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
+      "Graduated in 4 years. I immediately found a job as a full-stack developer.",
     icon: React.createElement(LuGraduationCap),
-    date: "2019",
-  },
-  {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
-    description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
-    icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
+    date: "2020",
   },
   {
     title: "Full-Stack Developer",
-    location: "Houston, TX",
+    location: "Forte ArGe, Ankara, Turkey",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
+      "I worked as a full stack developer, mainly using Angular, Java Spring and MySQL. I worked on a project called FiloSoft, a vehicle management company for large companies.",
+    icon: React.createElement(CgWorkAlt),
+    date: "2020 - 2021",
+  },
+  {
+    title: "Front-end Developer",
+    location: "Hipo, Toronto, Canada",
+    description:
+      "I worked as a front-end developer, mainly using React, TypeScript and SASS. Built & maintained many large scale applications and implemented, tested reusable UI components.",
     icon: React.createElement(FaReact),
-    date: "2021 - present",
+    date: "2021 - 2023",
+  },
+  {
+    title: "Front-end Developer",
+    location: "Pera Wallet, Lisbon, Portugal",
+    description:
+      "Implemented the Discover section of the Pera Wallet app, a web app that is injected into the native Android and iOS apps. I was one of the main developers of Discover.",
+    icon: React.createElement(FaWallet),
+    date: "2022 - 2023",
+  },
+  {
+    title: "Front-end Developer",
+    location: "Yopaat, Netherlands",
+    description:
+      "Currently implementing Gèsume, a social media-like platform for people in need of a job via graphical resume feature. Project uses Nuxt3 and Laravel.",
+    icon: React.createElement(FaComputer),
+    date: "2023 - current",
   },
 ] as const;
 
@@ -84,6 +102,13 @@ export const projectsData = [
     tags: ["React", "Typescript", "SASS", "Context API", "Framer Motion"],
     imageUrl: unwrapitImg,
   },
+  {
+    title: "Gèsume",
+    description:
+      "A social media-like platform for people in need of a job via graphical resume feature. Project uses Nuxt3 and Laravel.",
+    tags: ["Nuxt.js", "Javascript", "Tailwind", "Laravel"],
+    imageUrl: gesumeImg,
+  }
 ] as const;
 
 export const skillsData = [

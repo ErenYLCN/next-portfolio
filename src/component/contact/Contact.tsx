@@ -3,13 +3,18 @@
 import React from "react";
 
 import { motion } from "framer-motion";
-import { FaPaperPlane } from "react-icons/fa";
+import toast from "react-hot-toast";
 
+import { sendEmailAction } from "@/core/action/actions";
 import { useActiveSectionHandler } from "@/core/hook/active-section-handler/useActiveSectionHandler";
+import {
+  MAIL_ADDRESS,
+  MAX_MAIL_ADDRESS_LENGTH,
+  MAX_MESSAGE_LENGTH,
+} from "@/core/lib/constant";
 
+import ContactSubmitButton from "./submit-button/ContactSubmitButton";
 import SectionHeading from "../section-heading/SectionHeading";
-
-const MAIL = "yalcineren97@gmail.com";
 
 function Contact() {
   const { ref } = useActiveSectionHandler({ name: "Contact" });
@@ -26,39 +31,51 @@ function Contact() {
     >
       <SectionHeading title={"contact me"} />
 
-      <p className={"text-gray-700 -mt-6"}>
+      <p className={"text-gray-700 -mt-6 dark:text-white/80"}>
         {"Contact me directly at "}
-        <a className={"underline"} href={`mailto:${MAIL}`}>
-          {MAIL}
+        <a className={"underline"} href={`mailto:${MAIL_ADDRESS}`}>
+          {MAIL_ADDRESS}
         </a>
         {" or using this form:"}
       </p>
 
-      <form className={"mt-10 flex flex-col gap-2"}>
+      <form
+        className={"mt-10 flex flex-col gap-2 dark:text-black"}
+        action={contactFormAction}
+      >
         <input
           type={"email"}
-          className={`h-14 rounded-lg outline-black px-4`}
+          name={"senderEmail"}
+          className={`h-14 rounded-lg outline-black borderBlack px-4 dark:bg-white/80
+            dark:focus:bg-white/100 dark:outline-none transition-all`}
           placeholder={"Your email"}
+          required
+          maxLength={MAX_MAIL_ADDRESS_LENGTH}
         />
         <textarea
-          className={"h-52 my-3 rounded-lg outline-black border-black p-4"}
+          className={`h-52 my-3 rounded-lg outline-black borderBlack p-4 dark:bg-white/80
+            dark:focus:bg-white/100 dark:outline-none transition-all`}
+          name={"message"}
           placeholder={"Your message"}
+          required
+          maxLength={MAX_MESSAGE_LENGTH + 1}
         />
-        <button
-          type={"submit"}
-          className={`group relative flex items-center justify-center gap-2 h-[3rem] w-[8rem] 
-          bg-black text-white rounded-full outline transition-all focus:scale-110 hover:scale-110
-          hover:bg-gray-950 active:scale-105`}
-        >
-          {"Submit"}
-          <FaPaperPlane
-            className={`text-xs opacity-70 transition-all group-hover:translate-x-1
-            group-hover:-translate-y-1`}
-          />
-        </button>
+
+        <ContactSubmitButton />
       </form>
     </motion.section>
   );
+
+  async function contactFormAction(formData: FormData) {
+    const { error } = await sendEmailAction(formData);
+
+    if (error) {
+      toast.error(error);
+      return;
+    }
+
+    toast.success("Message sent!");
+  }
 }
 
 export default Contact;

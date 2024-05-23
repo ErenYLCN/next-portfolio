@@ -7,3 +7,11 @@ html {
   // for timeline line color
   --line-color: #e2e8f0;
 }
+
+html.dark {
+  --line-color: rgba(255, 255, 255, 0.2);
+}
+
+.borderBlack {
+  @apply border border-black/10;
+}

@@ -35,7 +35,9 @@ function Skills() {
         {skillsData.map((skill, index) => (
           <motion.li
             key={index}
-            className={"bg-white border border-black/10 rounded-xl px-5 py-3"}
+            className={
+              "bg-white dark:bg-white/10 dark:text-white/80 borderBlack rounded-xl px-5 py-3"
+            }
             variants={FADE_IN_VARIANTS}
             initial={"initial"}
             whileInView={"animate"}
