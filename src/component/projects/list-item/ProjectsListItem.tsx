@@ -48,7 +48,7 @@ function ProjectsListItem({ title, description, tags, imageUrl }: ProjectsListIt
       </div>
 
       <Image
-        className={`absolute top-8 -right-40 w-[28.25rem] rounded-t-lg shadow-2xl 
+        className={`absolute hidden sm:block top-8 -right-40 w-[28.25rem] rounded-t-lg shadow-2xl 
         group-even:right-[initial] group-even:-left-40 group-hover:-translate-x-3
         group-hover:translate-y-3 group-hover:-rotate-2 transition group-hover:scale-[1.04]
         group-even:group-hover:translate-x-3 group-even:group-hover:rotate-2`}
