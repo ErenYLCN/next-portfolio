@@ -58,7 +58,7 @@ function Contact() {
           name={"message"}
           placeholder={"Your message"}
           required
-          maxLength={MAX_MESSAGE_LENGTH + 1}
+          maxLength={MAX_MESSAGE_LENGTH}
         />
 
         <ContactSubmitButton />
