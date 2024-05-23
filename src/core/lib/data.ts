@@ -124,6 +124,7 @@ export const skillsData = [
   "Git",
   "Tailwind",
   "Framer Motion",
+  "Three.js",
   "Redux",
   "Context API",
   "Zustand",
