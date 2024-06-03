@@ -1,5 +1,7 @@
 import fs from "fs"
 
+// TODO: This part is not working on production, setup a simple database to store the visit_count
+
 // increment visit_count on public/metrics.json
 export async function POST() {
   let path = process.cwd() + "/public/metrics.json"
