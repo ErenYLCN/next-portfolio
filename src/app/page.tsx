@@ -7,7 +7,16 @@ import Projects from "@/component/projects/Projects";
 import SectionDivider from "@/component/section-divider/SectionDivider";
 import Skills from "@/component/skills/Skills";
 
-export default function Home() {
+const incrementViewCount = async () => {
+  await fetch(`${process.env.ORIGIN_URL}/api/visit`, {
+    method: "POST",
+    cache: "no-store",
+  });
+};
+
+export default async function Home() {
+  await incrementViewCount();
+
   return (
     <main className={"pt-28 flex flex-col items-center px-4"}>
       <Header />
