@@ -2,6 +2,8 @@
 
 Welcome to my portfolio website built with the latest technologies in the React ecosystem! This project showcases my CV, LinkedIn and GitHub links, some of the projects I've worked on, my experiences, and includes a contact form utilizing react-email and resend.
 
+[erenyalcin.vercel.app](https://erenyalcin.vercel.app/)
+
 ## Table of Contents
 
 - [Features](#features)
