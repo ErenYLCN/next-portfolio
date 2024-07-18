@@ -25,7 +25,7 @@
     "resend": "^3.2.0"
   },
   "devDependencies": {
-    "@types/node": "^20",
+    "@types/node": "^20.14.11",
     "@types/react": "npm:types-react@beta",
     "@types/react-dom": "npm:types-react-dom@beta",
     "@types/react-vertical-timeline-component": "^3.3.6",
