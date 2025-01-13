@@ -1,10 +1,11 @@
 import React from "react";
 
 import { CgWorkAlt } from "react-icons/cg";
-import { FaReact, FaWallet } from "react-icons/fa";
+import { FaReact, FaWallet, FaMoneyBill } from "react-icons/fa";
 import { FaComputer } from "react-icons/fa6";
 import { LuGraduationCap } from "react-icons/lu";
 
+import forinvestImg from "../../../public/forinvest.png";
 import gesumeImg from "../../../public/gesume.png";
 import governanceImg from "../../../public/governance.png";
 import peraImg from "../../../public/pera.png";
@@ -76,7 +77,15 @@ export const experiencesData = [
     description:
       "Currently implementing Gèsume, a social media-like platform for people in need of a job via graphical resume feature. Project uses Nuxt3 and Laravel.",
     icon: React.createElement(FaComputer),
-    date: "2023 - current",
+    date: "2023 - 2024",
+  },
+  {
+    title: "Front-end Developer",
+    location: "ForInvest, Istanbul, Turkey",
+    description:
+      "Currently working on one of the leading Fin-Tech companies of Turkey with lots of investment solutions provided using more than 500 terabytes of growing market data. Projects are mostly React and Vue projects⁠",
+    icon: React.createElement(FaMoneyBill),
+    date: "2024 - current",
   },
 ] as const;
 
@@ -108,7 +117,14 @@ export const projectsData = [
       "A social media-like platform for people in need of a job via graphical resume feature. Project uses Nuxt3 and Laravel.",
     tags: ["Nuxt.js", "Javascript", "Tailwind", "Laravel"],
     imageUrl: gesumeImg,
-  }
+  },
+  {
+    title: "ForInvest",
+    description:
+      "Projects and widgets provided to companies using real-time market data provided by socket connections.",
+    tags: ["Nuxt.js", "Vue.js", "React.js", "Java Spring"],
+    imageUrl: forinvestImg,
+  },
 ] as const;
 
 export const skillsData = [
