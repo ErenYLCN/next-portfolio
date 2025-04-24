@@ -30,7 +30,9 @@ function About() {
         {", and since then, I've worked on multiple "}
         <span className={"font-medium"}>{"large-scale applications"}</span>
         {" across various domains, with a particular focus on "}
-        <span className={"font-medium underline italic"}>{"blockchain technology"}</span>
+        <span className={"font-medium underline italic"}>
+          {"blockchain technology and fin-tech"}
+        </span>
         {
           ". My professional journey has not only honed my technical skills but also allowed me to "
         }
