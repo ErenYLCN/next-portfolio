@@ -41,13 +41,6 @@ function About() {
           ", sharing my knowledge and fostering the next generation of developers. I'm passionate about staying at the forefront of technology, continuously exploring new tools and methodologies to enhance my work."
         }
       </p>
-      <p>
-        {"Currently, I am expanding my skill set by learning "}
-        <span className={"font-medium underline italic"}>
-          {"full stack development with ExpressJS"}
-        </span>
-        {", aiming to broaden my expertise and take on more comprehensive projects."}
-      </p>
     </motion.section>
   );
 }

@@ -107,7 +107,7 @@ function Intro() {
         </a>
 
         <a
-          href={"https://linkedin.com/in/ernylcn"}
+          href={"https://linkedin.com/in/ernylcn/"}
           target={"_blank"}
           className={`bg-white px-3 py-3 flex items-center gap-2 rounded-full outline-none 
           focus:scale-110 hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition 
